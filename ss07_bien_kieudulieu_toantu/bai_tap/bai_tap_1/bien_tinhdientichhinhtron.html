@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Bán kính hình tròn
+        </th>
+        <th> <input type="number" id="r">
+        </th>
+    </tr>
+    <tr>
+        <th> <button onclick="clickhere()">Tính</button></th>
+        <th> Diện tích<span id = "s"></span></th>
+        <th> Chu vi<span id = "p"></span></th>
+    </tr>
+</table>
+<script>
+    function clickhere(){
+        let radius = document.getElementById("r").value;
+        let area = parseInt(radidus)*parseInt(radius)* 3.14;
+        let perimeter = (parseInt(radius)+parseInt(radius))* 3.14;
+        document.getElementById("s").innerHTML = area;
+        document.getElementById("p").innerHTML = perimeter;
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table cellspacing="3", cellpadding=" 8">
+  <tr>
+    <th> <h3><spanp>Số tiền</spanp></h3> </th>
+    <th> <h3><spanp>Từ tiền tệ</spanp></h3> </th>
+    <th> <h3><spanp>Đến tiền tệ</spanp></h3> </th>
+    <br>
+    <th rowspan="2" style="color: blue"> <button style="background-color: mediumpurple" onclick="convert()">Chuyển đổi</button> </th>
+
+  </tr>
+  <tr>
+    <th> <input type="text" id="moNey"></th>
+    <th> <select>
+      <option value="VND">VND</option>
+    </select>
+    </th><th> <select>
+      <option value="USD">USD</option>
+    </select>
+    </th>
+  </tr>
+  <tr>
+    <th><span id="total"> </span></th>
+  </tr>
+</table>
+<script>
+  function convert() {
+    let moNey = document.getElementById("moNey").value;
+    let change = parseInt(moNey)/23187;
+    document.getElementById("total").innerHTML = b;
+  }
+</script>
+
+</body>
+</html>

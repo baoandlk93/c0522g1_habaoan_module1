@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr> CACULATOR</tr>
+  <tr> <th colspan="2" > <input type="number" id="numBer"></th>
+      <th colspan="2"> <input type="number" id="numBer1"></th>
+  </tr>
+  <tr>
+  <th> <button onclick="summation()"> Cộng</button></th>
+  <th> <button onclick="subtraction()"> Trừ</button></th>
+  <th> <button onclick="multiplication()"> Nhân</button></th>
+  <th> <button onclick="division()"> Chia</button></th>
+  </tr>
+    <tr>
+        <th> Kết quả <span id="total"></span></th>
+    </tr>
+</table>
+<script>
+    function summation(){
+        let numBer = document.getElementById("numBer").value;
+        let numBer1 = document.getElementById("numBer1").value;
+        let result = parseFloat(numBer) + parseFloat(numBer1);
+        document.getElementById("total").innerHTML = result;
+    }
+    function subtraction (){
+        let numBer = document.getElementById("numBer").value;
+        let numBer1 = document.getElementById("numBer1").value;
+        let result = parseFloat(numBer) - parseFloat(numBer1);
+        document.getElementById("total").innerHTML = result;
+    }
+    function multiplication(){
+        let numBer = document.getElementById("numBer").value;
+        let numBer1 = document.getElementById("numBer1").value;
+        let result = parseFloat(numBer) * parseFloat(numBer1);
+        document.getElementById("total").innerHTML = result;
+    }
+    function division(){
+        let numBer = document.getElementById("numBer").value;
+        let numBer1 = document.getElementById("numBer1").value;
+        let result = parseFloat(numBer) / parseFloat(numBer1);
+        document.getElementById("total").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>

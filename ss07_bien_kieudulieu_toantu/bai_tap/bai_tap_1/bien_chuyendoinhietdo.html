@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Độ C </th>
+        <th> <input type="number" id="celsius"></th>
+    </tr><tr>
+    <tr>
+        <th> <button onclick="doing()"> Chuyển đổi</button> </th>
+    </tr>
+    <th>Độ F </th>
+    <th> <span id="fahrenheit">  </span></th>
+    </tr>
+    <script>
+        function doing() {
+            let temperature = document.getElementById("celsius").value;
+            let change = parseInt(temperature)*9/5+32 ;
+            document.getElementById("fahrenheit").innerHTML = change ;
+        }
+
+    </script>
+</table>
+
+</body>
+</html>

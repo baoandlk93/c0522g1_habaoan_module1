@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Điểm Vật lý <th> <input type="number" id="physics">
+    </th>
+    </tr>
+    <tr>
+        <th>Điểm Hoá<th> <input type="number" id="chemisty">
+    </th>
+    </tr>
+    <tr>
+        <th>Điểm Sinh học <th><input type="number" id="biological">
+        </th>
+    </tr>
+    <tr>
+        <th> <button onclick="total()">Điểm</button></th>
+        <td> <span id="totalScore">   </span> </td>
+        <td> <span id="mediumScore">   </span> </td>
+    </tr>
+
+</table>
+<script>
+    function total(){
+    let physics = document.getElementById("physics").value;
+    let chemystry = document.getElementById("chemistry").value;
+    let biological = document.getElementById("biological").value;
+    let score = parseInt(physics)+parseInt(chemystry)+parseInt(biological);
+    document.getElementById("totalScore").innerHTML= score;
+    document.getElementById("mediumScore").innerHTML= score/3;
+    }
+</script>
+
+</body>
+</html>
