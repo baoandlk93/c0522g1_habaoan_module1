@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><h1> Kiểm tra số ngày trong tháng</h1></p>
+<table>
+    <tr>
+        <th> <input type="number" id="month"> </th>
+        <th> <button onclick="monthCalculator()"> Tính số ngày</button> </th>
+    </tr>
+    <tr>
+        <th> <p id="dayOfMonth"></p></th>
+    </tr>
+</table>
+<script>
+    function monthCalculator(){
+        let month =document.getElementById("month").value;
+        switch (parseInt(month)) {
+            case 1: document.getElementById("dayOfMonth").innerText="Tháng 1 có 31 ngày";break;
+            case 2: document.getElementById("dayOfMonth").innerText="Tháng 2 có 28 hoặc ngày";break;
+            case 3: document.getElementById("dayOfMonth").innerText="Tháng 3 có 31 ngày";break;
+            case 4: document.getElementById("dayOfMonth").innerText="Tháng 4 có 30 ngày";break;
+            case 5: document.getElementById("dayOfMonth").innerText="Tháng 5 có 31 ngày";break;
+            case 6: document.getElementById("dayOfMonth").innerText="Tháng 6 có 30 ngày";break;
+            case 7: document.getElementById("dayOfMonth").innerText="Tháng 7 có 31 ngày";break;
+            case 8: document.getElementById("dayOfMonth").innerText="Tháng 8 có 31 ngày";break;
+            case 9: document.getElementById("dayOfMonth").innerText="Tháng 9 có 30 ngày";break;
+            case 10: document.getElementById("dayOfMonth").innerText="Tháng 10 có 31 ngày";break;
+            case 11: document.getElementById("dayOfMonth").innerText="Tháng 11có 30 ngày";break;
+            case 12: document.getElementById("dayOfMonth").innerText="Tháng 12 có 31 ngày";break;
+            default: document.getElementById("dayOfMonth").innerText="Không có tháng này!";
+        }
+}
+</script>
+</body>
+</html>

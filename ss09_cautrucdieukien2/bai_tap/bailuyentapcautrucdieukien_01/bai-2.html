@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <tr> <h1> Liệu bạn có đủ tuổi để học lớp 10</h1>
+  </tr>
+    <tr>
+        <th>Nhập số tuổi bạn vào đây! <input type="number" id="old"></th>
+    </tr>
+    <tr>
+        <th> <button onclick="review()">Kiểm tra</button> </th>
+    </tr>
+    <tr>
+        <th><span id="result"></span></th>
+    </tr>
+
+</table>
+<script>
+function review(){
+    let old = document.getElementById("old").value;
+    if(old >= 16) {
+        document.getElementById("result").innerText = "Bạn đủ tuổi để học lớp 10";
+    }   else
+            document.getElementById("result").innerText = "Bạn không đủ tuổi để học lớp 10"
+}
+</script>
+
+</body>
+</html>

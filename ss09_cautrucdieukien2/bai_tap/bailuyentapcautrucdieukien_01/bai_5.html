@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <tr>
+    <th> Điểm Toán<input type="number" id="math"></th>
+  </tr>
+    <th> Điểm Vật Lý <input type="number" id =physics></th>
+    <tr>
+    <th> Điểm Hoá<input type="number" id="chemistry"></th>
+    </tr>
+    <tr>
+    <th> Điểm Anh văn <input type="number" id="english"></th>
+    </tr>
+    <tr>
+    <th> Điểm Lịch sử <input type="number" id="history"></th>
+    </tr>
+    <tr>
+    <th> Điểm Địa lí <input type="number" id="geography"></th>
+  </tr>
+  <tr>
+    <th> <button onclick="equal()">Điểm trung bình</button> </th>
+  </tr>
+  <tr>
+    <th><span id="result"></span></th>
+  </tr>
+</table>
+<script>
+  function equal(){
+    let math = document.getElementById("math").value;
+    let physics = document.getElementById("physics").value;
+    let chemistry = document.getElementById("chemistry").value;
+    let english = document.getElementById("english").value;
+    let history = document.getElementById("history").value;
+    let gepgraphy = document.getElementById("geography").value;
+    let total = (parseInt(math)+parseInt(physics)+parseInt(chemistry)+parseInt(english)+parseInt(history)+parseInt(gepgraphy))/6;
+    if (total<5){
+      document.getElementById("result").innerText = "Yếu";
+    } else if(total<=7){
+      document.getElementById("result").innerText = "Trung Bình";
+    } else if(total<8){
+      document.getElementById("result").innerText = "Giỏi";
+    } else document.getElementById("result").innerText = "Xuất sắc";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <tr>
+    <th>Nhập số vào đây <input type="number" id="numberInteger"></th>
+  </tr>
+  <tr>
+    <td> <button onclick="test()">Kiểm tra</button> </td>
+  </tr>
+  <tr>
+    <td><span id="result">Kết quả</span> </td>
+  </tr>
+</table>
+<script>
+  function test(){
+    let numberInteger = document.getElementById("numberInteger").value;
+    if (numberInteger > 0){
+      document.getElementById("result").innerText = "Đây là số lớn hơn 0";
+    } else document.getElementById("result").innerText = "Đây là số nhỏ hơn 0";
+  }
+</script>
+</body>
+</html>

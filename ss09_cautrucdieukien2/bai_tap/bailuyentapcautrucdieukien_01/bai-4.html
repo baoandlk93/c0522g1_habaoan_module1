@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="0">
+    <tr>
+        <th> Nhập vào số a <input type="number" id="numberIntergerFist"></th>
+        <th> Nhập vào số b <input type="number" id="numberIntergerSecond"></th>
+        <th> Nhập vào số c <input type="number" id="numberIntergerThird"></th>
+    </tr>
+    <tr>
+        <td> <button onclick="checkBest()"> Kiểm tra</button> </td>
+    </tr>
+    <tr>
+        <td><span id="result"> Kết quả</span></td>
+    </tr>
+</table>
+<script>
+    function checkBest(){
+        let a = document.getElementById("numberIntergerFist").value;
+        let b = document.getElementById("numberIntergerSecond").value;
+        let c = document.getElementById("numberIntergerThird").value;
+        if( a > b && b > c ){
+            document.getElementById("result").innerText = "a là số lớn nhất";
+        } else
+            if( a < b && b > c){
+                document.getElementById("result").innerText = "b là số lớn nhất";
+            } else
+                if( a < b && b < c){
+                document.getElementById("result").innerText = "c là số lớn nhất";
+            }
+        }
+</script>
+
+</body>
+</html>

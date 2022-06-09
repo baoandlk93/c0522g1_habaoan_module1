@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th> Giải phương trình bậc nhất</th>
+  </tr>
+  <tr> <th> ax +b = c</th></tr>
+  <tr>
+    <td>Nhập số a<input type="number" id="numberA"></td>
+  </tr>
+  <tr>
+    <td>Nhập số b<input type="number" id="numberB"></td>
+  </tr>
+  <tr>
+    <td>Nhập số c<input type="number" id="numberC"></td>
+  </tr>
+  <tr>
+    <th><button onclick="equal()">Kết quả</button> </th>
+  </tr>
+  <tr>
+    <td>
+      <span>x =</span>
+      <span id="equal"></span>
+      <span id="equal1"></span>
+    </td>
+  </tr>
+</table>
+<script>
+  function equal(){
+    let a = document.getElementById("numberA").value;
+    let b = document.getElementById("numberB").value;
+    let c = document.getElementById("numberC").value;
+    let x = (parseFloat(c)-parseFloat(b))/parseFloat(a);
+    document.getElementById("equal").innerHTML = x;
+    if(x>0){
+      document.getElementById("equal1").innerText= "x là số dương";
+    } else document.getElementById("equal1").innerText =("x là số âm");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Số điện <input type="number" id="numberElectric"></th>
+  </tr>
+  <tr>
+    <th> <button onclick="calculator()">Tính tiền</button> </th>
+  </tr>
+    <tr>
+        <th>
+            <span>Số tiền</span>
+            <span id="price"></span>
+            <span> VND</span>
+        </th>
+    </tr>
+</table>
+<script>
+    function calculator(){
+    let e = document.getElementById("numberElectric").value;
+    if(e<100&&e>0){
+        document.getElementById("price").innerHTML = e* 2500;
+    }else if(e<200){
+        document.getElementById("price").innerHTML = e*3500;
+    }else if(e<300){
+        document.getElementById("price").innerHTML =e*4500;
+    }else if(e<400){
+        document.getElementById("price").innerHTML =e*5000;
+    }else
+        document.getElementById("price").innerHTML =e*6000;
+    }
+</script>
+</body>
+</html>

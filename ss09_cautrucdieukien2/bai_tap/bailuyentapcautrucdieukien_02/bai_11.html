@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>Nhập vào lương của bạn</th>
+    <td><input type="number" id="income"></td>
+  </tr>
+    <tr>
+        <td><button onclick="calculator()">Tính thuế</button> </td>
+    </tr>
+    <tr>
+        <td>
+            <span>Thuế thu nhập cá nhân của bạn là</span>
+            <span id="result"></span>
+        </td>
+    </tr>
+</table>
+<script>
+    function calculator(){
+        let income = parseInt(document.getElementById("income").value);
+        if(income>10000000&&income<=20000000){
+            document.getElementById("result").innerHTML = (income/100)*5;
+        }
+        else
+            if(income<=30000000&&income>20000000){
+            document.getElementById("result").innerHTML = (income/100)*10;
+        }else
+            if(income>30000000){
+            document.getElementById("result").innerHTML = (income/100)*15;
+        }
+            else{
+            document.getElementById("result").innerHTML ="Bạn không phải đóng thuế";
+            }
+    }
+</script>
+</body>
+</html>

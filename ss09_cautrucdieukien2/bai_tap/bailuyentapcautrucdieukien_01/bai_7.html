@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+  <th> Số phút đã sử dụng <input type="number" id="minute"></th>
+  </tr>
+  <tr>
+    <td><button onclick="postage()">Tính tiền</button> </td>
+  </tr>
+  <tr>
+    <td><span id="postage">Số tiền phải trả</span></td>
+  </tr>
+</table>
+<script>
+  function postage(){
+    let minute = document.getElementById("minute").value;
+    let price = 3000;
+    if(minute>0 && minute<=10){
+      document.getElementById("postage").innerHTML = minute * price;
+    } else if(minute<=50){
+      document.getElementById("postage").innerHTML = minute * (price * 1.5);
+    } else
+      document.getElementById("postage").innerHTML = minute * (price*2);
+  }
+</script>
+
+</body>
+</html>

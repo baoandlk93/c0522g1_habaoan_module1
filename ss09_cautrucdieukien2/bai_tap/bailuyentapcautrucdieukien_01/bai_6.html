@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <h1> Thưởng doanh số bán xe</h1>
+    <tr>
+    <th>Doanh số bán hàng(chiếc)<input type="number" id="sales"></th>
+  </tr>
+    <tr>
+        <th> <button onclick="bonus()">Tính thưởng</button> </th>
+    </tr>
+    <tr>
+        <th><span id="bonus">Thưởng</span> </th>
+    </tr>
+</table>
+<script>
+    function bonus(){
+        let sales = document.getElementById("sales").value;
+        if(sales == 0){
+            document.getElementById("bonus").innerText = "Bạn không được thưởng";
+        } else if(sales< 10){
+            document.getElementById("bonus").innerText = "Bạn được thưởng 1% doanh số";
+        } else if(sales< 20){
+            document.getElementById("bonus").innerText = "Bạn được thưởng 2% doanh số";
+        } else if (sales<50){
+            document.getElementById("bonus").innerText = "Bạn được thưởng 3% doanh số";
+        } else document.getElementById("bonus").innerText = "Bạn là best seller"
+    }
+</script>
+
+</body>
+</html>

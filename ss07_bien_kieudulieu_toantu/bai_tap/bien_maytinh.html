@@ -7,8 +7,8 @@
 <body>
 <table>
   <tr> CACULATOR</tr>
-  <tr> <th colspan="2" > <input type="number" id="numBer"></th>
-      <th colspan="2"> <input type="number" id="numBer1"></th>
+  <tr> <th colspan="2" > <input type="number" id="fistNumber"></th>
+      <th colspan="2"> <input type="number" id="secondNumber"></th>
   </tr>
   <tr>
   <th> <button onclick="summation()"> Cộng</button></th>
@@ -22,27 +22,27 @@
 </table>
 <script>
     function summation(){
-        let numBer = document.getElementById("numBer").value;
-        let numBer1 = document.getElementById("numBer1").value;
-        let result = parseFloat(numBer) + parseFloat(numBer1);
+        let fistNumber = document.getElementById("fistNumber").value;
+        let secondNumber = document.getElementById("secondNumber").value;
+        let result = parseFloat(fistNumber) + parseFloat(secondNumber);
         document.getElementById("total").innerHTML = result;
     }
     function subtraction (){
-        let numBer = document.getElementById("numBer").value;
-        let numBer1 = document.getElementById("numBer1").value;
-        let result = parseFloat(numBer) - parseFloat(numBer1);
+        let fistNumber = document.getElementById("fistNumber").value;
+        let secondNumber = document.getElementById("secondNumber").value;
+        let result = parseFloat(fistNumber) - parseFloat(secondNumber);
         document.getElementById("total").innerHTML = result;
     }
     function multiplication(){
-        let numBer = document.getElementById("numBer").value;
-        let numBer1 = document.getElementById("numBer1").value;
-        let result = parseFloat(numBer) * parseFloat(numBer1);
+        let fistNumber = document.getElementById("fistNumber").value;
+        let secondNumber = document.getElementById("secondNumber").value;
+        let result = parseFloat(fistNumber) * parseFloat(secondNumber);
         document.getElementById("total").innerHTML = result;
     }
     function division(){
-        let numBer = document.getElementById("numBer").value;
-        let numBer1 = document.getElementById("numBer1").value;
-        let result = parseFloat(numBer) / parseFloat(numBer1);
+        let fistNumber = document.getElementById("fistNumber").value;
+        let secondNumber = document.getElementById("secondNumber").value;
+        let result = parseFloat(fistNumber) / parseFloat(secondNumber);
         document.getElementById("total").innerHTML = result;
     }
 </script>

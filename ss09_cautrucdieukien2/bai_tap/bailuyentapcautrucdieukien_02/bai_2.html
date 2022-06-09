@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th> <select id="from">
+      <option value="meter"> Mét(m)</option>
+      <option value="feet">Feet</option>
+    </select></th>
+  </tr>
+  <tr>
+    <th>
+      <input type="number" id="numberA">
+    </th>
+  </tr>
+  <tr>
+    <td> <button onclick="change()">Chuyển đổi</button> </td>
+  </tr>
+  <tr>
+    <td><span id ="equal"> kết quả</span>
+      <span id ="equal1"> kết quả</span>
+    </td>
+  </tr>
+</table>
+<script>
+  function change(){
+    let numberA = document.getElementById("numberA").value;
+    let from = document.getElementById("from").value;
+    switch (from){
+      case "meter": document.getElementById("equal").innerHTML =numberA*3.2808;
+       document.getElementById("equal1").innerHTML ="feet";
+        break;
+      case "feet": document.getElementById("equal").innerHTML = numberA/3.2808;
+        document.getElementById("equal1").innerHTML ="m";
+        break;
+    }
+  }
+</script>
+
+
+</body>
+</html>
