@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td> <button onclick="playGame()" style="width: 200px">Chơi</button> </td>
+    </tr>
+</table>
+<script>
+
+    function playGame(){
+        let inputNumberLength = prompt("Nhập vào số tối đa bạn muốn chọn!");
+        let i = 1;
+        let numberRandom = Math.floor(Math.random() * inputNumberLength);
+        console.log(numberRandom);
+        while (i <= 3 ){
+            let inputNumbers = prompt("Nhập vào số bạn muốn đoán!");
+            if (inputNumbers > numberRandom){
+                alert("số bạn đoán lớn hơn");
+            }
+            if (inputNumbers < numberRandom){
+                alert("số bạn đoán bé hơn");
+            }
+            if (parseInt(numberRandom) === parseInt(inputNumbers)){
+                document.write("Bạn đã đoán đúng");
+                break;
+            }
+            i++;
+
+        }document.write("Bạn đã hết lượt chơi");
+
+    }
+</script>
+</body>
+</html>

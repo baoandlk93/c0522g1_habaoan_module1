@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let seed1 = 0;
+  let seed2 = 1;
+  let seed3;
+  let fibonacci = seed1 + ", " + seed2;
+  for(var number = 2; number < 20; number++){
+    seed3 = seed1 + seed2;
+    fibonacci += ", " + seed3;
+    seed1 = seed2;
+    seed2 = seed3;
+  }
+  let total = 0;
+  do {
+    total += parseInt(seed1)+parseInt(seed2)+parseInt(seed3);
+  }while (number <20){
+    document.write(total);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let seed1 = 0;
+  let seed2 = 1;
+  let seed3;
+  let fibonacci = seed1 + ", " + seed2;
+  for(let number = 1; number<100; number++){
+    seed3 = seed1 + seed2;
+    fibonacci += ", " + seed3;
+    seed1 = seed2;
+    seed2 = seed3;
+    if (seed3%5===0){
+        break;
+    }
+  }
+      document.write( "số đầu tiên chia hết cho 5 là " + seed3);
+
+</script>
+</body>
+</html>

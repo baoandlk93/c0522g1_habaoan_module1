@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = 1;
+  let count = 1;
+      for(integer=0;integer<10000;integer++){
+
+          if (integer%7==0){
+              document.write(integer+"<br>");
+              number =number+integer;
+              count++;
+          }
+          if(count == 30){
+              break;
+          }
+      }document.write("tổng là"+ number);
+</script>
+</body>
+</html>

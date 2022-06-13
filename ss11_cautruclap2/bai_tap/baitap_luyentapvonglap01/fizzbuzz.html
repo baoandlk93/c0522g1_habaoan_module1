@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<SCRIPT>
+
+  for (var numberNatural=1;numberNatural<=100;numberNatural++){
+
+      if (numberNatural % 3 === 0 && numberNatural % 5 === 0){
+          document.write("FizzBuzz"+"<br>");
+          continue;
+      }
+      if (numberNatural % 5 === 0){
+          document.write("Buzz"+"<br>");
+          continue;
+      }
+      if (numberNatural % 3 ===0){
+      document.write("Fizz"+"<br>");
+      continue;
+    }
+      document.write(numberNatural+"<br>");
+  }
+</SCRIPT>
+</body>
+</html>
