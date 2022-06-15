@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let string = prompt("Input charater:");
+  let array = string.split("");
+  console.log(array);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === "-") {
+      array[i] = "_";
+    }
+  }
+  document.write(array+"");
+</script>
+</body>
+</html>

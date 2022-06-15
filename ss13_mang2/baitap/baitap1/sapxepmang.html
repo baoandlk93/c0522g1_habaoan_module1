@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let integer=[];
+  for (let i=0; i<10;i++){
+    integer[i] = parseInt(prompt("Nhập vào số nguyên thứ "+ i));
+  }
+  console.log(integer);
+
+  for (let i = 0; i< integer.length;i++){
+        for (let j=0;j<i;j++){
+            if (integer[i]>integer[j]){
+                let change = integer[i];
+                integer[i] = integer[j];
+                integer[j] = change;
+            }
+        }
+  }
+  document.write(integer);
+</script>
+</body>
+</html>

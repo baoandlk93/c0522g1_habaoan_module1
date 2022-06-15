@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let input = prompt("Nhập vào một chữ bất kì");
+  let equal = [];
+  for (let i = 0; i< input.length;i++){
+      if (input[i]=== input[i].toUpperCase()){
+          equal.push(input[i].toLowerCase());
+      }else if (input[i]===input[i].toLowerCase()){
+          equal.push(input[i].toUpperCase());
+      }else {
+          equal.push(input[i]);
+      }
+  }document.write(equal+"");
+</script>
+</body>
+</html>

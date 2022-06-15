@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let integer=[];
+  for (let i=0; i<10;i++){
+    integer[i] = parseInt(prompt("Nhập vào số nguyên"+i));
+  }
+  console.log(integer);
+  let maxInteger = integer[0]
+  for(let j = 1; j< integer.length;j++){
+    if (integer[j]> maxInteger){
+      maxInteger = integer[j];
+    }
+  }document.write(maxInteger+ "<br>");
+  let total = 0;
+  let average;
+  for (let i = 0; i<integer.length;i++){
+
+      total += integer[i];
+  }average = total/10;
+
+  document.write(average);
+
+</script>
+</body>
+</html>

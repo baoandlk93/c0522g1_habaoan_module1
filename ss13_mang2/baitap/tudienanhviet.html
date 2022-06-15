@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><input type="text" name="" id="input">Nhập từ</th>
+    </tr>
+  <tr>
+        <th><button onclick="transl()">Dịch</button> </th>
+    </tr>
+    <tr>
+        <th><p id="result"></p></th>
+    </tr>
+<script>
+    let english =["apple","banana","pencil","clear","moon"];
+    let vietnamese =["táo","quả chuối","bút chì","xoá","mặt trăng"];
+    let word;
+    let indexEng = 0;
+    function transl(){
+        word= document.getElementById("input").value;
+        for (let i = 0;i < english.length;i++){
+            if (word === english[i]){
+                indexEng = i;
+                for (let j =0;j<vietnamese.length;j++){
+                    if (indexEng === j){
+                        result = vietnamese[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result ;
+    }
+</script>
+
+</table>
+</body>
+</html>

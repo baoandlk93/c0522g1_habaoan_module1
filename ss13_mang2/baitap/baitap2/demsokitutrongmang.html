@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập số phần tử của mảng "));
+    let array = [];
+    let count = 0;
+    for (let i=0; i<number; i++) {
+        array[i] = prompt("Nhập phần tử " + i);
+        if (parseFloat(array[i]) || array[i]===0) {
+            count++;
+        }
+    }
+    alert("array = [" + array + "]");
+    document.write("Số kí tự số trong mảng là " + count);
+</script>
+</body>
+</html>

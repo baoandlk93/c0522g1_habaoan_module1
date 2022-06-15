@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer=[];
+    for (let i=0; i<10;i++){
+        integer[i] = parseInt(prompt("Nhập vào số nguyên" +i));
+    }
+    document.write(integer+"<br>");
+    let total=0
+    for (let j=0;j<integer.length;j++){
+        if (integer[j]<0){
+            total = total+1;
+        }
+    }document.write("tổng số nguyên âm là"+total+"<br>");
+</script>
+</body>
+</html>

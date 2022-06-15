@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer=[];
+    for (let i=0; i<10;i++){
+        integer[i] = parseInt(prompt("Nhập vào số nguyên thứ "+ i));
+    }
+    console.log(integer+"<br>");
+    let v = parseInt(prompt("nhập vào số cần tìm"));
+    let count =0;
+    for (let j=0;j<integer.length;j++){
+        if (v ===integer[j]){
+          document.write("v is the array");
+            count++;
+            break;
+        }
+    }
+    if(count ===0){
+        document.write("v is not in the array");
+    }
+</script>
+</body>
+</html>

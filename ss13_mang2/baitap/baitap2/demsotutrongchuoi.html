@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = [];
+    for (let i = 0;i<3;i++){
+        string[i]= prompt("Nhập vào chuỗi số "+ i+1);
+    } alert("chuỗi bạn nhập vào là" + string);
+    let count =0;
+    for(let i = 0; i< string.length; i++){
+      if (string[i]!==" "&& string[i+1]===" "){
+          count++;
+      }
+    }
+    if (string[string.length-1] !== " ") {
+        count+=1;
+    }
+    document.write("Số từ trong chuỗi là " + count);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer=[];
+    for (let i=0; i<10;i++){
+        integer[i] = parseInt(prompt("Nhập vào số nguyên" + i));
+    }
+ console.log(integer);
+    let maxInteger = integer[0]
+    let locat ="";
+    for(let j = 1; j< integer.length;j++){
+        if (integer[j]> maxInteger){
+             maxInteger = integer[j];
+             locat = j;
+        }
+    }
+    document.write(maxInteger + "<br>");
+    document.write(locat);
+
+</script>
+</body>
+</html>

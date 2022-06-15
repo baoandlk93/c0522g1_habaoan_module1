@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer=[];
+    for (let i=0; i<10;i++){
+        integer[i] = parseInt(prompt("Nhập vào số nguyên thứ "+ i));
+    }
+    console.log(integer+"<br>");
+    let v = parseInt(prompt("nhập vào số cần tìm"));
+    let count =-1;
+    for (let j=0;j<integer.length;j++){
+        if (v ===integer[j]){
+            count = j;
+        }
+    }
+    if (count!==-1){
+        for (let i = count;i<integer.length;i++){
+            integer[i] = integer[i +1];
+        }
+    integer[integer.length-1] = 0;
+        document.write(integer);
+    }
+    else {
+        document.write("trong mảng không tồn tại"+v);
+    }
+
+</script>
+</body>
+</html>

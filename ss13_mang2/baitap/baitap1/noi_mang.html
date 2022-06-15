@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //khai báo mảng A
+    let integerA=[];
+    for (let i=0; i<10;i++){
+        integerA[i] = parseInt(prompt("Nhập vào số nguyên" +i));
+    }
+    document.write(integerA+"<br>");
+    //khai báo mảng B
+    let integerB=[];
+    for (let i=0; i<10;i++){
+        integerB[i] = parseInt(prompt("Nhập vào số nguyên" +i));
+    }
+    document.write(integerB+"<br>");
+
+    let integerC = [];
+    for(let i = 0; i < integerA.length;i++){
+        integerC[i] = integerA[i];
+    }
+    for (let j = 0;j < integerB.length;j++){
+        integerC[integerA.length + j] = integerB[j];
+    }
+    document.write(integerC +"<br>");
+</script>
+</body>
+</html>

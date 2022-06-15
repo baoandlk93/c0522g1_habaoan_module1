@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer=[];
+    for (i=0; i<10;i++){
+        integer[i] = prompt("Nhập vào số nguyên" + i);
+    }
+    console.log(integer);
+    let count = 0;
+    for(j = 0;j<integer.length;j++){
+        if (integer[j]>=10){
+            count= count+1;
+        }
+    }
+    document.write("có" +count+"số lớn hơn hoặc bằng 10");
+</script>
+</body>
+</html>
