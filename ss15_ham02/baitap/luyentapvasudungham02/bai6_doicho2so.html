@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numberA = parseInt(prompt("Nhập vào số đầu tiên"));
+  let numberB = parseInt(prompt("Nhập vào số thứ hai"));
+  function changePlace(a,b){
+      let temp = numberA;
+      numberA = numberB;
+      numberB = temp;
+      return numberA +" "+numberB;
+  }
+  let change = changePlace(numberA,numberB);
+  document.writeln(change);
+</script>
+</body>
+</html>

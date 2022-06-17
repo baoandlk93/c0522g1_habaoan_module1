@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function circleArea(radius){
+        let result = radius * radius * 3.14;
+        return result;
+    }
+    function circlePerimeter(radius){
+        let result = radius * 2 * 3.14;
+        return result;
+    }
+    let radius = prompt("Nhập vào bán kính hình tròn");
+    let area = circleArea(radius);
+    document.write(" diện tích hình tròn" + "" + area +"<br>");
+    let perimeter = circlePerimeter(radius);
+    document.write("chu vi hình tròn là" + "" + perimeter);
+</script>
+</body>
+</html>

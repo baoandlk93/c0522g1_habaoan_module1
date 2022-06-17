@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayRandom=[];
+    for (let i = 0;i<10 ; i++){
+        arrayRandom[i] = prompt("nhập vào kí tự bất kì"+ i);
+    }document.write(arrayRandom + "<br>");
+    function checkCharacter(character){
+        let count = 0;
+
+        for (let j = 0; j< arrayRandom.length;j++){
+            if (character ===arrayRandom[j]){
+                count++;
+            }
+        }
+        if (count === 0){
+            return -1;
+        }
+        return count;
+    }
+    let character = prompt("Nhập vào kí tự bạn muốn kiểm tra");
+    let check = checkCharacter(character);
+    document.writeln(check);
+</script>
+</body>
+</html>

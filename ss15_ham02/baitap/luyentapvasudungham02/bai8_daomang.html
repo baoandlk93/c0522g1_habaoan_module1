@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumber =[];
+    for (let i = 0;i< 5; i++){
+       arrayNumber[i]=parseInt(prompt("nhập vào số nguyên thứ"+ (i)));
+
+    } document.writeln(arrayNumber+"<br>");
+    function reverseArray() {
+        let first = 0;
+        let last = arrayNumber.length - 1
+        for (let i = 1; i < arrayNumber.length; i++) {
+            if (first < last) {
+                let b = arrayNumber [first];
+                arrayNumber[first] = arrayNumber[last];
+                arrayNumber[last] = b;
+                first++;
+                last--;
+            }
+        }return arrayNumber;
+    }
+    let reverse = reverseArray(arrayNumber);
+    document.writeln(reverse);
+
+
+
+</script>
+</body>
+</html>

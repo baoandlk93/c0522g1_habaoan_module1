@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let starA = ["polaris", "aldebaran", "deneb", "vega", "altair", "dubhe", "regulus"];
+  let starB = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+  function checkStar(star){
+    let check = 0;
+    let result = "";
+    for (let i = 0; i <starA.length;i++){
+      if (star === starA[i]){
+         check++;
+         result = starB[i];
+      }
+    }if (check === 0 ){
+          result = "Không có chòm sao này"
+    } return result;
+  }
+  let star = prompt("Nhập vào chòm sao bạn muốn tìm");
+  document.write(checkStar(star));
+</script>
+</body>
+</html>
