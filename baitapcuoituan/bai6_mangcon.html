@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkArray(array1, array2) {
+    let array3 = [array2[0]];
+    for (let i=0; i<=array1.length; i++) {
+    if (array2[0]===array1[i]) {
+    for (let j=1; j<array2.length; j++) {
+    if (array2[j]===array1[i+1]) {
+    array3.push(array2[j]);
+    i++;
+  }
+  }
+    if (array3.length===array2.length) {
+    return true;
+  }
+    else {
+    array3 = [array2[0]];
+  }
+  }
+  }
+    if (array3.length!==array2.length) {
+    return false;
+  }
+  }
+    let array1 = [1, 2, 3, 4, 3, 4, 5, 8, 9];
+    let array2 = [3, 4, 5];
+    document.write("Mảng thứ nhất: " + array1 + "<br>");
+    document.write("Mảng thứ hai: " + array2 + "<br>");
+      document.write("result: " + checkArray(array1, array2));
+</script>
+</script>
+</body>
+</html>

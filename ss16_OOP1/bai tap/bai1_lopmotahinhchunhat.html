@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="retangle" width="800" height="600" style="border: 1px solid #d61b06 "><br></canvas>
+<p id="area"></p>
+<p id="perimeter"></p>
+<script>
+class Rectangle{
+    constructor(length,width) {
+        this.length = length;
+        this.width = width;
+        this.area = width * length;
+        this.perimeter = (width+length)*2;
+    }
+    setLenggth(newLength){
+       this.length = newLength;
+    }
+    setWidth(newWidth){
+        this.width = newWidth;
+    }
+    getArea(){
+        return this.area = this.width *this.length
+    }
+    getPerimeter(){
+        return this.perimeter = (this.width + this.length)*2;
+    }
+    getLength(){
+        return this.length;
+    }
+    getWidth(){
+        return this.width;
+    }
+}
+    let area = new Rectangle(20,10);
+    let perimeter = new Rectangle(20,10);
+    area.setLenggth(10);
+    perimeter.setWidth(5);
+    document.getElementById("area").innerHTML =("diện tích là:" +area.getArea()+"<br>");
+    document.getElementById("perimeter").innerHTML ="Chu vi là :"+perimeter.getPerimeter();
+let c = document.getElementById("retangle");
+let ctx = c.getContext("2d");
+
+let grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,area.getWidth(),area.getLength());
+
+
+</script>
+</body>
+</html>

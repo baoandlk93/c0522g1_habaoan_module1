@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class Temperature{
+    constructor(celsius) {
+        this.celsius = celsius;
+        this.fahrenheit = 32+ this.celsius*9/5;
+        this.kelvin = this.celsius + 273;
+    }
+    setCelsius(newCelsius){
+        this.celsius = newCelsius;
+    }
+    getFahrenheit(){
+        return this.fahrenheit = 32+ this.celsius * 9/5;
+    }
+    getKelvin() {
+        return this.kelvin = this.celsius + 273;
+    }
+}
+let convert = new Temperature(-273);
+convert.setCelsius(25);
+document.writeln("Độ C:"+ convert.celsius+"Độ C"+ "<br>");
+document.writeln("Chuyển sang độ F:"+ convert.getFahrenheit()+" "+"Độ F"+"<br>");
+document.writeln("Chuyển sang độ K:"+convert.getKelvin()+" "+"Độ K");
+
+</script>
+</body>
+</html>
