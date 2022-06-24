@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height = parseInt(prompt("Nhập chiều cao tam giác cân: "));
+    let triangle = "<table>";
+    for (let i = 1; i <= height; i++) {
+        triangle += "<tr>";
+        for (let j = 1; j <= i; j++) {
+            if (i === height || j === 1 || j === i) {
+                triangle += "<td>" + "*" + "</td>";
+            } else {
+                triangle += "<td>" + "</td>";
+            }
+        }
+        triangle += "</tr>";
+    }
+    triangle += "</table>";
+    document.write(triangle);
+</script>
+</body>
+</html>

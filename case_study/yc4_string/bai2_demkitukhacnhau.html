@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function differentCharacter(otherString) {
+        let array = [otherString[0]];
+        for (let i = 0; i < otherString.length; i++) {
+            let count = 0;
+            for (let j = 0; j < array.length; j++) {
+                if (otherString[i] === array[j]) {
+                    count++;
+                }
+            }
+            if (count === 0) {
+                array.push(otherString[i]);
+            }
+        }
+        return array.length;
+
+    }
+
+    let string = prompt("Nhập vào chuỗi bất kì");
+    document.write("Chuỗi bạn nhập là : " + "" + string + "<br>")
+    document.write("Số kí tự khác nhau trong chuỗi là " + differentCharacter(string))
+</script>
+</body>
+</html>

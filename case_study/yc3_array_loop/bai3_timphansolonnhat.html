@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNumber = prompt("Nhập vào số lượng phân số bạn muốn tạo");
+    let numerators = [];
+    for (let i = 0; i < inputNumber; i++) {
+        numerators[i] = Math.floor(Math.random() * 20);
+    }
+    let denominators = [];
+    for (let i = 0; i < inputNumber; i++) {
+        denominators[i] = Math.floor(Math.random() * 20) + 1;
+    }
+    document.write("Tử số : " + numerators + "<br>");
+    document.write("Mẫu số : " + denominators + "<br>");
+
+    function maxFraction() {
+        let index = 0;
+        let max = numerators[0] / denominators[0];
+        for (let i = 1; i < numerators.length; i++) {
+            if (numerators[i] !== denominators[i]) {
+                if ((numerators[i] / denominators[i]) > max) {
+                    max = numerators[i] / denominators[i];
+                    index = i;
+                }
+            }
+        }
+        return index;
+        // document.write("Phân số lớn nhất là:" + " " + max + "<br>");
+        // document.write("Vị trí của mẫu số là :" + index);
+    }
+
+    document.write(maxFraction() + "<br>");
+    document.write("phân số lớn nhất là : " + numerators[maxFraction()] + "/" + denominators[maxFraction()]);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập vào số hàng"));
+    let column = parseInt(prompt("Nhập vào số cột"));
+    let twoDimensionalArray = []
+    for (let i = 0; i < row; i++) {
+        let arrayNumber = [];
+        for (let j = 0; j < column; j++) {
+            arrayNumber[j] = Math.floor(Math.random() * 100);
+        }
+        twoDimensionalArray[i] = arrayNumber;
+    }
+    document.write(twoDimensionalArray + "<br>");
+
+    function maxOfArray(twoDimensionalArray) {
+        let max = twoDimensionalArray[0][0];
+        let min = twoDimensionalArray[0][0];
+        for (let i = 0; i < twoDimensionalArray.length; i++) {
+            for (let j = 0; j < twoDimensionalArray[i].length; j++) {
+                if (twoDimensionalArray[i][j] > max) {
+                    max = twoDimensionalArray[i][j];
+                }
+                if (twoDimensionalArray[i][j] < min) {
+                    min = twoDimensionalArray[i][j];
+                }
+            }
+        }
+        document.write("Số lớn nhất trong mảng là : " + max + "<br>")
+        document.write("Số nhỏ nhất trong mảng là : " + min + "<br>")
+    }
+
+    maxOfArray(twoDimensionalArray);
+</script>
+</body>
+</html>

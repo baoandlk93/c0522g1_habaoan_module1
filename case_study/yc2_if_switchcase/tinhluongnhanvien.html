@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Nhập vào lương của nhân viên"));
+    let netSalary;
+    if (salary >= 15000000) {
+        netSalary = salary - (salary * 0.2);
+    } else if (salary < 15000000 && salary >= 7000000) {
+        netSalary = salary - (salary * 0.1);
+    } else if (salary < 7000000 && salary >= 3000000) {
+        netSalary = salary - (salary * 0.05);
+    } else {
+        netSalary = salary;
+    }
+    document.write("Số tiền nhân viên nhận được là :" + netSalary);
+</script>
+</body>
+</html>

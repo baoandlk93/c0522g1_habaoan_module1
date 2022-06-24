@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập vào số hàng"));
+    let column = parseInt(prompt("Nhập vào số cột"));
+    let twoDimensionalArray = []
+    for (let i = 0; i < row; i++) {
+        let arrayNumber = [];
+        for (let j = 0; j < column; j++) {
+            arrayNumber[j] = Math.floor(Math.random() * 100);
+        }
+        twoDimensionalArray[i] = arrayNumber;
+    }
+    document.write(twoDimensionalArray + "<br>");
+
+    function checkPrime(twoDimensionalArray) {
+        let count = 0;
+        for (let row = 0; row < twoDimensionalArray.length; row++) {
+            for (let col = 0; col < twoDimensionalArray[row].length; col++) {
+                let index = 0;
+                let isPrime = false;
+                if (twoDimensionalArray[row][col] !== 0) {
+                    for (let i = 1; i <= twoDimensionalArray[row][col]; i++) {
+                        if (twoDimensionalArray[row][col] % i === 0) {
+                            index += 1;
+                        }
+                    }
+                }
+                if (index === 2) {
+                    isPrime = true;
+                }
+                if (isPrime === true) {
+                    count += 1;
+                    document.write("số nguyên tố trong mảng là:" + twoDimensionalArray[row][col] + "<br>");
+
+                }
+            }
+        }
+        if (count !== 0) {
+            document.write("có " + count + " số nguyên tố trong mảng");
+
+        } else {
+            document.write("Không có sô nguyên tố trong mảng này");
+
+        }
+    }
+
+    checkPrime(twoDimensionalArray);
+</script>
+</body>
+</html>

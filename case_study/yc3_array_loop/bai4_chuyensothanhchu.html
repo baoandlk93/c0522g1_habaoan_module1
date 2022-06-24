@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let integer = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    let word = ["Không", "Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín"];
+    let input = prompt("Nhập vào số bất kì");
+    for (let i = 0; i < input.length; i++) {
+        for (let j = 0; j < integer.length; j++) {
+            if (input[i] === integer[j]) {
+                document.write(word[j] + " ");
+            }
+        }
+    }
+</script>
+</body>
+</html>

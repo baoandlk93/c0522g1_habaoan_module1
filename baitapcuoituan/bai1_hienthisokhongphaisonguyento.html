@@ -7,19 +7,20 @@
 <body>
 <script>
     let number = prompt("nhập vào số nguyên bất kì"); // câu lệnh tạo mảng số nguyên
-    let integer=[];
-    for (let i=0; i<=number;i++){
+    let integer = [];
+    for (let i = 0; i <= number; i++) {
         integer[i] = i;
     }
     console.log(integer);
+
     function checkInteger(a) {
         let count = 1;
-        if(a<2){
+        if (a < 2) {
             return count = 0;
         }
         let i = 2;
-        while (i < a){          // kiểm tra số nguyên tố
-            if (a % i===0){
+        while (i < a) {          // kiểm tra số nguyên tố
+            if (a % i === 0) {
                 count = 0;
                 break;
             }
@@ -27,9 +28,10 @@
         }
         return count;
     }
-    for (let j =0;j<integer.length;j++){            //duyệt mảng để kiểm tra số
-        if (checkInteger(integer[j])===0){
-            document.writeln(integer[j]+"<br>");
+
+    for (let j = 0; j < integer.length; j++) {            //duyệt mảng để kiểm tra số
+        if (checkInteger(integer[j]) === 0) {
+            document.writeln(integer[j] + "<br>");
         }
     }
 

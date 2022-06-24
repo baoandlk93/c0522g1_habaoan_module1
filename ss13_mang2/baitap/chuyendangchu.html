@@ -6,17 +6,32 @@
 </head>
 <body>
 <script>
-  let input = prompt("Nhập vào một chữ bất kì");
-  let equal = [];
-  for (let i = 0; i< input.length;i++){
-      if (input[i]=== input[i].toUpperCase()){
-          equal.push(input[i].toLowerCase());
-      }else if (input[i]===input[i].toLowerCase()){
-          equal.push(input[i].toUpperCase());
-      }else {
-          equal.push(input[i]);
+  // let input = prompt("Nhập vào một chữ bất kì");
+  // let equal = [];
+  // for (let i = 0; i< input.length;i++){
+  //     if (input[i]=== input[i].toUpperCase()){
+  //         equal.push(input[i].toLowerCase());
+  //     }else if (input[i]===input[i].toLowerCase()){
+  //         equal.push(input[i].toUpperCase());
+  //     }else {
+  //         equal.push(input[i]);
+  //     }
+  // }document.write(equal+"");
+  function differentSymbolsNaive(string) {
+      let array = [string[0]];
+      for (let i = 0; i < string.length; i++) {
+          let index = 0;
+          for (let j = 0; j < array.length; j++) {
+              if (string[i] === array[j]) {
+                  index++;
+              }
+          }
+          if (index === 0) {
+              array.push(string[i]);
+          }
       }
-  }document.write(equal+"");
+      return array.length;
+  }
 </script>
 </body>
 </html>

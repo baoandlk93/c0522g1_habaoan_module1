@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(stringA, stringB) {
+        let count = 0;
+        for (let i = 0; i < stringA.length; i++) {
+            for (let j = 0; j < stringB.length; j++) {
+                if (stringA[i] === stringB[j]) {
+                    count++
+                }
+            }
+        }
+        return count;
+    }
+
+    let stringFirst = prompt("nhập vào chuỗi thứ nhất");
+    let stringSecond = prompt("nhập vào chuỗi thứ hai");
+    document.write("Chuỗi thứ nhất : " + stringFirst + "<br>");
+    document.write("Chuỗi thứ hai : " + stringSecond + "<br>");
+    document.write("Số kí tự chung của 2 chuỗi là : " + commonCharacterCount(stringFirst, stringSecond));
+</script>
+</body>
+</html>

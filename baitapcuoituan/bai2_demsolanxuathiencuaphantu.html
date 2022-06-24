@@ -7,26 +7,28 @@
 <body>
 <script>
     let number = parseInt(prompt("nhập vào số nguyên bất kì")); // câu lệnh tạo mảng số nguyên
-    let integer=[];
-    for (let i=0; i<number;i++){
-        integer[i] = Math.floor(Math.random()*number);
+    let integer = [];
+    for (let i = 0; i < number; i++) {
+        integer[i] = Math.floor(Math.random() * number);
     }
     console.log(integer);
-    function checkTimes(){
+
+    function checkTimes() {
         let count = 0;
         let times = 0;
-        for (let i = 0;i< integer.length;i++){
-            for (let j=1;j<i;j++){
-                if (integer[i]===integer[j]){
-                    count+=1;
+        for (let i = 0; i < integer.length; i++) {
+            for (let j = 1; j < i; j++) {
+                if (integer[i] === integer[j]) {
+                    count += 1;
                     times = 1;
                 }
             }
-            if(times ===1){
-                document.write(integer[i]+":"+count+"lần"+"<br");
+            if (times === 1) {
+                document.write(integer[i] + ":" + count + "lần" + "<br");
             }
         }
     }
+
     checkTimes(integer);
 </script>
 </body>
